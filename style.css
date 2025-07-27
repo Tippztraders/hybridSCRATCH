@@ -267,8 +267,8 @@ section p {
 
 /* == IMAGE GALLERY == */
 .image-gallery-placeholder {
-  width: 850px;
-  height: 567px;
+  width: 450px;
+  height: 300px;
   margin: 0 auto;
   position: relative;
   background: #f0f0f0;
