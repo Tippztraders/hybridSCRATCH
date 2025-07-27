@@ -289,13 +289,23 @@ section p {
 
 
 /* == RESUMO == */
-.resume-grid {
+/* .resume-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   gap: 15px;
   padding: 20px 0;
   text-align: center;
+}  */
+
+.resume-grid {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+  text-align: center;
+  gap: 0; /* no gap */
 }
+
+
 
 .building-card {
   background-color: #24fff8;  
