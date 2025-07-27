@@ -1,0 +1,489 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: #f6faff;
+  color: #222;
+  padding: 0;
+}
+
+.site-container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 1em;
+  text-align: center;
+}
+
+/* == HERO == */
+.hero {
+  background: #fff8dc;
+  text-align: center;
+  padding: 2em 1em;
+  color: #333;
+}
+
+.hero-logo {
+  width: 90px;
+  height: auto;
+  margin-bottom: 1em;
+}
+
+.after-hero-image {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  display: block;
+  margin: 10px auto;
+}
+
+.headline {
+  font-size: 1.8em;
+  font-weight: bold;
+  margin: 0.2em 0;
+}
+
+.address-line {
+  font-size: 1em;
+  margin: 0;
+}
+
+.city {
+  font-size: 1.5em;
+  color: #000;
+  margin-bottom: 0.5em;
+}
+
+.tagline {
+  font-size: 1em;
+  font-style: italic;
+  color: #444;
+  margin-top: 0.5em;
+}
+
+/* == NAVIGATION == */
+.section-nav {
+  background-color: #004080;
+  padding: 1em;
+  overflow-x: auto;
+}
+
+.section-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.section-nav a {
+  display: inline-block;
+  padding: 0.5em 1em;
+  background-color: #fff;
+  color: #004080;
+  text-decoration: none;
+  font-size: 0.9em;
+  border-radius: 6px;
+  white-space: nowrap;
+  transition: background 0.3s;
+}
+
+.section-nav a:hover {
+  background-color: #e0e0e0;
+}
+
+/* == IMAGES AFTER SECTIONS == */
+.after-hero-image,
+.after-description-image,
+.after-location-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 1em auto;
+  border-radius: 12px;
+}
+
+.after-description-image {
+  max-width: 960px;
+}
+
+/* == DESCRICAO == */
+#descricao h2,
+#localizacao h2,
+#galeria h2,
+#preco h2,
+#resumo h2,
+#bonus h2,
+#condicao-de-uso h2,
+#links-uteis h2 {
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+
+#descricao {
+  text-align: justify;
+  margin-bottom: 2em;
+  font-size: 1.2em;
+}
+
+/* IMAGE AFTER DESCRIPTION */
+.image-pair-wrapper img.after-description-image {
+  max-width: 100%;
+  width: 350px;      /* Adjust this to resize */
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+/* == INFO CARDS == */
+
+
+/* INLINE ICONS */
+.inline-icon {
+  width: 30px;
+  height: auto;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+/* == LOCATION == */
+section p {
+  font-size: 1.3em;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 1em;
+  text-align: left;
+}
+
+#localizacao p:not(.location-highlight) {
+  text-align: center;
+}
+
+.location-highlight {
+  background: linear-gradient(to right, #d4fcd4, #a0e6a0);
+  padding: 12px 18px;
+  margin: 20px auto;
+  text-align: center;
+  font-weight: bold;
+  border: 2px solid #8ccf8c;
+  border-radius: 0;
+  max-width: 600px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+/* == GPS IMAGE == */
+.after-location-image {
+  max-width: 400px;
+  margin: 1em auto;
+}
+
+.gps-image {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* To make image big/small */
+.gps-image-wrapper {
+  text-align: center;
+  margin: 40px auto;
+  padding: 10px;
+  max-width: 960px;
+}
+
+/* To make image big/small */
+.gps-image-wrapper img.gps-image {
+  display: inline-block;
+  max-width: 100%;
+  width: 500px; /* 400 Adjust this to make it smaller/larger */
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
+}
+
+/* For the actual GPS */
+.gps-map-wrapper {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Actual Map with Pin layout */
+#mapa {
+  padding: 20px;
+  text-align: center;
+  position: relative;
+}
+
+/* Container allows positioning pin */
+.map-container {
+  position: relative;   
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: fit-content;
+}
+
+/* Main map image */
+.map-image {
+  max-width: 400px; /* was 300 */
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.map-hint {
+  text-align: center;
+  margin-top: -10px;    /* pulls it up */
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Overlay pin centered */
+.map-pin {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 30px;
+  height: auto;
+  transform: translate(-50%, -100%);
+  pointer-events: none;
+}
+
+/* Optional helper text */
+.map-text {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #555;
+  font-style: italic;
+}
+
+/* == IMAGE GALLERY == */
+
+
+
+
+
+
+
+
+ 
+
+
+ 
+
+
+/* == VIDEO GALLERY == */
+
+/* == PRICE == */  
+
+
+/* This Controls Price Styles  */
+
+
+
+/* == RESUMO == */  
+.resume-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5em; /* more space between cards */
+  margin-top: 1em;
+}
+
+.highlight-card {
+  background: rgba(173, 216, 230, 0.35); /* slightly more visible blue */
+  border: 1px solid rgba(100, 150, 200, 0.3);
+  border-radius: 14px;
+  padding: 16px 12px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.06);
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.highlight-card:hover {
+  transform: scale(1.02); /* subtle hover effect for interactivity */
+}
+
+
+
+
+
+/* HIGHLIGHT GRID - RESUMO */
+
+
+
+
+/* == RESUMO == */
+.resume-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 15px;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.highlight-card {
+  background-color: #24fff8;  
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.08);
+  text-align: center; /* center all inner text including emoji */
+}
+
+.emoji {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.highlight-card p {
+  font-size: 14px;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+/* BONUS LINK & DISCLAIMER */
+.bonus-link {
+  display: inline-block;
+  font-size: 1em;  /* reduce from inherited larger sizes */
+  margin-top: 1em;
+  color: #0066cc;
+  text-decoration: underline;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.bonus-link:hover {
+  color: #004499;
+  text-decoration: none;
+}
+
+
+/* FOOTER: THIS CODE CONTROLS THE FOOTER */
+.footer {
+  background-size: 100% 150px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #0057b8; /* Primary blue */
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 20px 15px 15px;
+  font-size: 20px;
+  line-height: 2;
+  text-align: center;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center; /* Center child blocks */
+  text-align: left;
+}
+
+.footer-section {
+  flex: 1 1 250px;
+  min-width: 200px;
+}
+
+.footer-section h3,
+.footer-section h4 {
+  color: #f29c1f; /* Accent orange */
+  margin-bottom: 10px;
+  font-weight: 700;
+  border-bottom: 2px solid #f29c1f;
+  padding-bottom: 5px;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.footer-section p,
+.footer-section ul {
+  font-size: 13px;
+  line-height: 1.3;
+  margin-bottom: 8px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.footer-section ul li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: #f29c1f;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-icons a {
+  background-color: #e1e5ea;
+  color: #0057b8;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  border-radius: 50%;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-size: 18px;
+}
+
+.social-icons a:hover {
+  background-color: #f29c1f;
+  color: white;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  margin-top: 15px;
+  padding-top: 5px;
+  text-align: center;
+  font-size: 12px;
+  color: #cfd6e2;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .footer-section {
+    flex: 1 1 100%;
+  }
+
+  .footer-section ul li {
+    text-align: center;
+  }
+}
+
+/* END OF FOOTER */
+
+
