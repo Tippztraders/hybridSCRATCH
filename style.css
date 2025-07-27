@@ -312,6 +312,7 @@ section p {
   border-radius: 12px;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.08);
   text-align: center;
+  border-radius: 0;
 }
 
 .building-card p {
@@ -324,6 +325,7 @@ section p {
   border-radius: 12px;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.08);
   text-align: center;
+  border-radius: 0;
 }
 
 .utility-card p {
@@ -336,6 +338,7 @@ section p {
   border-radius: 12px;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.08);
   text-align: center;
+  border-radius: 0;
 }
 
 .redcar-card p {
@@ -359,6 +362,7 @@ section p {
   border-radius: 12px;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.08);
   text-align: center;
+  border-radius: 0;    
 }
 
 .address-card p {
