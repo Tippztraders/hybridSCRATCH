@@ -299,7 +299,7 @@ section p {
 .destaque-preco {  /* this is the "atual preco" */
   background: linear-gradient(to right, #d4fcd4, #a0e6a0); /* green gradient */
   border: 2px solid #8ccf8c;
-  padding: 12px 18px;
+  padding: 18px 24px;
   margin: 20px auto;
   text-align: center;
   font-weight: bold;
@@ -308,6 +308,19 @@ section p {
   box-shadow: 0 2px 5px rgba(0,0,0,0.15);
   font-size: 1.4em;
   color: #004d00;
+}
+
+.pago-dolares { 
+  background: linear-gradient(to right, #e8ebed, #e6e8eb); 
+  border-left: 5px solid #bfbfbf;
+  padding: 1em;
+  margin: 1em auto;
+  border-radius: 10px;
+  max-width: 720px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  text-align: left;
+  font-size: 1em;
+  color: #003366;
 }
 
 /* == RESUMO == */
