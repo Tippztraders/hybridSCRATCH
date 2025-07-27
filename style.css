@@ -288,38 +288,6 @@ section p {
 /* This Controls Price Styles  */
 
 
-
-/* == RESUMO == */  
-.resume-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 1.5em; /* more space between cards */
-  margin-top: 1em;
-}
-
-.highlight-card {
-  background: rgba(173, 216, 230, 0.35); /* slightly more visible blue */
-  border: 1px solid rgba(100, 150, 200, 0.3);
-  border-radius: 14px;
-  padding: 16px 12px;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.06);
-  text-align: center;
-  transition: transform 0.2s ease;
-}
-
-.highlight-card:hover {
-  transform: scale(1.02); /* subtle hover effect for interactivity */
-}
-
-
-
-
-
-/* HIGHLIGHT GRID - RESUMO */
-
-
-
-
 /* == RESUMO == */
 .resume-grid {
   display: grid;
@@ -329,42 +297,64 @@ section p {
   text-align: center;
 }
 
-.highlight-card {
+.building-card {
   background-color: #24fff8;  
   border-radius: 12px;
-  padding: 12px;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.08);
-  text-align: center; /* center all inner text including emoji */
+  text-align: center;
 }
 
-.emoji {
-  font-size: 28px;
-  margin-bottom: 8px;
-}
-
-.highlight-card p {
-  font-size: 14px;
+.building-card p {
   margin: 0;
-  align-items: center;
-  justify-content: center;
+  text-align: center; /* explicitly center the text */
 }
 
-/* BONUS LINK & DISCLAIMER */
-.bonus-link {
-  display: inline-block;
-  font-size: 1em;  /* reduce from inherited larger sizes */
-  margin-top: 1em;
-  color: #0066cc;
-  text-decoration: underline;
-  font-weight: bold;
-  font-style: italic;
+  .utility-card {
+   background-color: none;  
+  border-radius: 12px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.08);
+  text-align: center;
 }
 
-.bonus-link:hover {
-  color: #004499;
-  text-decoration: none;
+.utility-card p {
+  margin: 0;
+  text-align: center; /* explicitly center the text */
 }
 
+.redcar-card {
+  background-color: #24fff8;  
+  border-radius: 12px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.redcar-card p {
+  margin: 0;
+  text-align: center; /* explicitly center the text */
+}
+
+  .condition-card {
+   background-color: none;  
+  border-radius: 12px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.condition-card p {
+  margin: 0;
+  text-align: center; /* explicitly center the text */
+}
+  .address-card {
+   background-color: #24fff8;  
+  border-radius: 12px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.address-card p {
+  margin: 0;
+  text-align: center; /* explicitly center the text */
+}
 
 /* FOOTER: THIS CODE CONTROLS THE FOOTER */
 .footer {
