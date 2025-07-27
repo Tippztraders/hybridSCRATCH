@@ -269,7 +269,7 @@ section p {
 .image-gallery-placeholder {
   width: 250px;
   height: 300px;
-  margin: 0 auto;
+  margin: 0;
   position: relative;
   background: #f0f0f0;
   overflow: hidden;
