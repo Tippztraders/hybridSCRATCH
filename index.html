@@ -1,178 +1,175 @@
-<!-- GALERIA DE IMAGENS -->
-<section id="galeria">
-  <h2><u>Galeria de Imagens</u></h2>
-  <div class="site-container">
-    <div class="image-gallery-placeholder" id="image-gallery-placeholder">
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Edifício à Venda - Keep Pushing</title>
 
-      <!-- Swiper container -->
-      <div class="my-gallery-swiper swiper">
-        <div class="swiper-wrapper">
-          <!-- Slides FG1 to FG38 -->
-          <div class="swiper-slide"><div class="swiper-zoom-container"><img src="FG1.jpg" alt="FG1" /></div></div>
-          <div class="swiper-slide"><div class="swiper-zoom-container"><img src="FG2.jpg" alt="FG2" /></div></div>
-          <div class="swiper-slide"><div class="swiper-zoom-container"><img src="FG3.jpg" alt="FG3" /></div></div>
-          <div class="swiper-slide"><div class="swiper-zoom-container"><img src="FG4.jpg" alt="FG4" /></div></div>
-          <div class="swiper-slide"><div class="swiper-zoom-container"><img src="FG5.jpg" alt="FG5" /></div></div>
-          <div class="swiper-slide"><div class="swiper-zoom-container"><img src="FG6.jpg" alt="FG6" /></div></div>
-          <div class="swiper-slide"><div class="swiper-zoom-container"><img src="FG7.jpg" alt="FG7" /></div></div>
-          <div class="swiper-slide"><div class="swiper-zoom-container"><img src="FG8.jpg" alt="FG8" /></div></div>
-          <div class="swiper-slide"><div class="swiper-zoom-container"><img src="FG9.jpg" alt="FG9" /></div></div>
-          <div class="swiper-slide"><div class="swiper-zoom-container"><img src="FG10.jpg" alt="FG10" /></div></div>
-          <div class="swiper-slide"><div class="swiper-zoom-container"><img src="FG11.jpg" alt="FG11" /></div></div>
-          <div class="swiper-slide"><div class="swiper-zoom-container"><img src="FG12.jpg" alt="FG12" /></div></div>
-          <div class="swiper-slide"><div class="swiper-zoom-container"><img src="FG13.jpg" alt="FG13" /></div></div>
-          <div class="swiper-slide"><div class="swiper-zoom-container"><img src="FG14.jpg" alt="FG14" /></div></div>
-          <div class="swiper-slide"><div class="swiper-zoom-container"><img src="FG15.jpg" alt="FG15" /></div></div>
-          <div class="swiper-slide"><div class="swiper-zoom-container"><img src="FG16.jpg" alt="FG16" /></div></div>
-          <div class="swiper-slide"><div class="swiper-zoom-container"><img src="FG17.jpg" alt="FG17" /></div></div>
-          <div class="swiper-slide"><div class="swiper-zoom-container"><img src="FG18.jpg" alt="FG18" /></div></div>
-          <div class="swiper-slide"><div class="swiper-zoom-container"><img src="FG19.jpg" alt="FG19" /></div></div>
-          <div class="swiper-slide"><div class="swiper-zoom-container"><img src="FG20.jpg" alt="FG20" /></div></div>
-          <div class="swiper-slide"><div class="swiper-zoom-container"><img src="FG21.jpg" alt="FG21" /></div></div>
-          <div class="swiper-slide"><div class="swiper-zoom-container"><img src="FG22.jpg" alt="FG22" /></div></div>
-          <div class="swiper-slide"><div class="swiper-zoom-container"><img src="FG23.jpg" alt="FG23" /></div></div>
-          <div class="swiper-slide"><div class="swiper-zoom-container"><img src="FG24.jpg" alt="FG24" /></div></div>
-          <div class="swiper-slide"><div class="swiper-zoom-container"><img src="FG25.jpg" alt="FG25" /></div></div>
-          <div class="swiper-slide"><div class="swiper-zoom-container"><img src="FG26.jpg" alt="FG26" /></div></div>
-          <div class="swiper-slide"><div class="swiper-zoom-container"><img src="FG27.jpg" alt="FG27" /></div></div>
-          <div class="swiper-slide"><div class="swiper-zoom-container"><img src="FG28.jpg" alt="FG28" /></div></div>
-          <div class="swiper-slide"><div class="swiper-zoom-container"><img src="FG29.jpg" alt="FG29" /></div></div>
-          <div class="swiper-slide"><div class="swiper-zoom-container"><img src="FG30.jpg" alt="FG30" /></div></div>
-          <div class="swiper-slide"><div class="swiper-zoom-container"><img src="FG31.jpg" alt="FG31" /></div></div>
-          <div class="swiper-slide"><div class="swiper-zoom-container"><img src="FG32.jpg" alt="FG32" /></div></div>
-          <div class="swiper-slide"><div class="swiper-zoom-container"><img src="FG33.jpg" alt="FG33" /></div></div>
-          <div class="swiper-slide"><div class="swiper-zoom-container"><img src="FG34.jpg" alt="FG34" /></div></div>
-          <div class="swiper-slide"><div class="swiper-zoom-container"><img src="FG35.jpg" alt="FG35" /></div></div>
-          <div class="swiper-slide"><div class="swiper-zoom-container"><img src="FG36.jpg" alt="FG36" /></div></div>
-          <div class="swiper-slide"><div class="swiper-zoom-container"><img src="FG37.jpg" alt="FG37" /></div></div>
-          <div class="swiper-slide"><div class="swiper-zoom-container"><img src="FG38.jpg" alt="FG38" /></div></div>
-          <!-- End Slide -->
-          <div class="swiper-slide end-slide">
-            <div class="end-text">Começando Denovo</div>
+  <!-- Swiper CSS -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
+  <style>
+    /* Your gallery styles included here */
+    .image-gallery-placeholder {
+      width: 850px;
+      height: 567px;
+      margin: 2em auto;
+      position: relative;
+      border: 3px solid #ccc;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      overflow: hidden;
+    }
+
+    .image-gallery-placeholder .swiper {
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+
+    .image-gallery-placeholder .swiper-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+
+    .image-gallery-placeholder img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .image-gallery-placeholder .swiper-pagination {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+      padding: 10px;
+      background-color: rgba(255, 255, 255, 0.8);
+      z-index: 10;
+    }
+
+    .image-gallery-placeholder .swiper-pagination-bullet {
+      background-color: #333;
+      opacity: 0.6;
+      width: 10px;
+      height: 10px;
+      margin: 4px;
+      border-radius: 50%;
+    }
+
+    .image-gallery-placeholder .swiper-pagination-bullet-active {
+      background-color: #000;
+      opacity: 1;
+    }
+
+    .tap-hint {
+      text-align: center;
+      font-size: 1em;
+      margin-top: 0.5em;
+    }
+
+    .end-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #e0f7fa;
+      font-size: 1.4em;
+      font-weight: bold;
+      color: #006064;
+    }
+    .end-text {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Edifício à Venda</h1>
+    <p>Av. Lenine, Mutu-ya-Kevele</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#galeria">Galeria de Imagens</a></li>
+    </ul>
+  </nav>
+
+  <!-- Gallery Section -->
+  <section id="galeria">
+    <h2><u>Galeria de Imagens</u></h2>
+    <div class="site-container">
+      <div class="image-gallery-placeholder" id="image-gallery-placeholder">
+
+        <!-- Swiper container -->
+        <div class="my-gallery-swiper swiper">
+          <div class="swiper-wrapper">
+            <!-- Slides FG1 to FG5 for demo -->
+            <div class="swiper-slide"><div class="swiper-zoom-container"><img src="FG1.jpg" alt="FG1" /></div></div>
+            <div class="swiper-slide"><div class="swiper-zoom-container"><img src="FG2.jpg" alt="FG2" /></div></div>
+            <div class="swiper-slide"><div class="swiper-zoom-container"><img src="FG3.jpg" alt="FG3" /></div></div>
+            <div class="swiper-slide"><div class="swiper-zoom-container"><img src="FG4.jpg" alt="FG4" /></div></div>
+            <div class="swiper-slide"><div class="swiper-zoom-container"><img src="FG5.jpg" alt="FG5" /></div></div>
+            <div class="swiper-slide end-slide">
+              <div class="end-text">Começando Denovo</div>
+            </div>
           </div>
+          <div class="swiper-pagination" id="close-gallery-area"></div>
         </div>
-        <div class="swiper-pagination" id="close-gallery-area"></div>
+
+        <p class="tap-hint">Toque para abrir</p>
       </div>
-
-      <p class="tap-hint">Toque para abrir</p>
     </div>
-  </div>
-</section>
+  </section>
 
-<style>
-.image-gallery-placeholder {
-  width: 850px;
-  height: 567px;
-  margin: 2em auto;
-  position: relative;
-  border: 3px solid #ccc;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  overflow: hidden;
-}
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-.image-gallery-placeholder .swiper {
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
+  <script>
+    let swiper;
 
-.image-gallery-placeholder .swiper-slide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-}
+    const placeholder = document.getElementById('image-gallery-placeholder');
+    const tapHint = document.querySelector('.tap-hint');
+    const closeArea = document.getElementById('close-gallery-area');
 
-.image-gallery-placeholder img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
+    function initGallery() {
+      swiper = new Swiper('.my-gallery-swiper', {
+        direction: 'horizontal',
+        loop: false,
+        zoom: {
+          maxRatio: 3,
+          minRatio: 1,
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        touchStartPreventDefault: false,
+      });
+    }
 
-.image-gallery-placeholder .swiper-pagination {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
-  padding: 10px;
-  background-color: rgba(255, 255, 255, 0.8);
-  z-index: 10;
-}
-
-.image-gallery-placeholder .swiper-pagination-bullet {
-  background-color: #333;
-  opacity: 0.6;
-  width: 10px;
-  height: 10px;
-  margin: 4px;
-  border-radius: 50%;
-}
-
-.image-gallery-placeholder .swiper-pagination-bullet-active {
-  background-color: #000;
-  opacity: 1;
-}
-
-.tap-hint {
-  text-align: center;
-  font-size: 1em;
-  margin-top: 0.5em;
-}
-
-.end-slide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #e0f7fa;
-  font-size: 1.4em;
-  font-weight: bold;
-  color: #006064;
-}
-.end-text {
-  text-align: center;
-}
-</style>
-
-<script>
-  let swiper;
-
-  const placeholder = document.getElementById('image-gallery-placeholder');
-  const tapHint = document.querySelector('.tap-hint');
-  const closeArea = document.getElementById('close-gallery-area');
-
-  function initGallery() {
-    swiper = new Swiper('.my-gallery-swiper', {
-      direction: 'horizontal',
-      loop: false,
-      zoom: {
-        maxRatio: 3,
-        minRatio: 1,
-      },
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      touchStartPreventDefault: false,
+    // Open gallery on tap
+    placeholder.addEventListener('click', function (e) {
+      if (!swiper) {
+        initGallery();
+        placeholder.classList.add('active');
+        tapHint.style.display = 'none';
+      }
     });
-  }
 
-  // Open gallery on tap
-  placeholder.addEventListener('click', function (e) {
-    if (!swiper) {
-      initGallery();
-      placeholder.classList.add('active');
-      tapHint.style.display = 'none';
-    }
-  });
-
-  // Exit gallery when tapping on pagination area
-  closeArea.addEventListener('click', function () {
-    if (swiper) {
-      swiper.destroy(true, true);
-      swiper = null;
-      tapHint.style.display = 'block';
-    }
-  });
-</script>
+    // Exit gallery when tapping on pagination area
+    closeArea.addEventListener('click', function () {
+      if (swiper) {
+        swiper.destroy(true, true);
+        swiper = null;
+        tapHint.style.display = 'block';
+      }
+    });
+  </script>
+</body>
+</html>
