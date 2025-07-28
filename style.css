@@ -577,7 +577,7 @@ section p {
   margin-bottom: 10px;
   font-weight: 700;
   border-bottom: 2px solid #f29c1f;
-  padding-bottom: 5px;
+  padding-bottom: 2px;
   font-size: 1.1rem;
   text-align: center;
 }
@@ -647,7 +647,7 @@ section p {
 @media (max-width: 600px) {
   .footer-container {
     flex-direction: column;
-    gap: 30px;
+    gap: 2px;   /* 30px */
     text-align: center;
   }
 
