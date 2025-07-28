@@ -372,11 +372,6 @@ section p {
   padding: 10px 0;
 }
 
-
-
-
-
-
 /* == VIDEO GALLERY == */
 #videos {
   max-height: 300px;
@@ -640,4 +635,29 @@ section p {
 
 /* END OF FOOTER */
 
+.fullscreen-gallery {
+  position: fixed;
+  inset: 0;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.fullscreen-gallery.visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.fullscreen-gallery img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  touch-action: pinch-zoom;
+  cursor: zoom-out;
+}
 
