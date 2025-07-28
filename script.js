@@ -1,114 +1,88 @@
-<!-- FIXED, NAMESPACED, AND ISOLATED GALLERY BLOCK -->
-<section id="galeria">
-  <h2><u>Galeria de Imagens</u></h2>
-  <div class="site-container">
-    <div id="image-gallery-placeholder" class="gallery-placeholder">
+// Initialize Gallery Swiper
+const gallerySwiper = new Swiper('.gallery-swiper', {
+  loop: true,
+  pagination: {
+    el: '.gallery-swiper .swiper-pagination',
+    clickable: true,
+  },
+  spaceBetween: 20,
+  slidesPerView: 1,
+});
 
-      <!-- Swiper container with namespaced class -->
-      <div class="my-gallery-swiper swiper">
-        <div class="swiper-wrapper">
-          <!-- Example: Repeat from FG1 to FG38 -->
-          <div class="swiper-slide"><img src="FG1.jpg" alt="FG1" /></div>
-          <div class="swiper-slide"><img src="FG2.jpg" alt="FG2" /></div>
-          <!-- ... up to FG38.jpg -->
-          <div class="swiper-slide"><img src="FG38.jpg" alt="FG38" /></div>
-        </div>
-        <!-- Dots + Exit Area -->
-        <div class="swiper-pagination" id="close-gallery-area"></div>
-      </div>
+// Video sources
+const videoList = ['FGVIDS1.mp4']; // Add more if you want
 
-      <p class="tap-hint">Toque para abrir</p>
-    </div>
-  </div>
-</section>
+// Insert videos into video swiper container
+const videoContainer = document.getElementById('videos-container');
+videoList.forEach(src => {
+  const slide = document.createElement('div');
+  slide.className = 'swiper-slide';
+  slide.innerHTML = `<video src="${src}" controls muted playsinline></video>`;
+  videoContainer.appendChild(slide);
+});
 
-<!-- CSS: Namespaced and Isolated Styles -->
-<style>
-  .gallery-placeholder {
-    width: 850px;
-    height: 567px;
-    margin: 2em auto;
-    position: relative;
-    border: 3px solid #ccc;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end; /* Position slides at base */
-    overflow: hidden;
-  }
+// Initialize Video Swiper
+const videoSwiper = new Swiper('.video-swiper', {
+  loop: true,
+  pagination: {
+    el: '.video-swiper .swiper-pagination',
+    clickable: true,
+  },
+  spaceBetween: 20,
+  slidesPerView: 1,
+});
 
-  .gallery-placeholder .swiper {
-    width: 100%;
-    height: 100%;
-    position: relative;
-  }
+// Initialize Hero Swiper (if you add a hero slider later)
+const heroSwiper = new Swiper('.hero-swiper', {
+  loop: true,
+  pagination: {
+    el: '.hero-swiper .swiper-pagination',
+    clickable: true,
+  },
+  autoplay: {
+    delay: 4000,
+  },
+});
 
-  .gallery-placeholder .swiper-slide {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-  }
+// Enable fullscreen swipe gallery
+const fullscreenWrapper = document.getElementById('fullscreenGallery');
+const fullscreenSwiperContainer = document.querySelector('.fullscreen-swiper .swiper-wrapper');
+const fullscreenSwiperPagination = document.querySelector('.fullscreen-swiper .swiper-pagination');
 
-  .gallery-placeholder img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-  }
+// Clear old slides if any
+fullscreenSwiperContainer.innerHTML = '';
 
-  .gallery-placeholder .swiper-pagination {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    padding: 10px;
-    background-color: rgba(255,255,255,0.8);
-    z-index: 10;
-  }
+// Clone gallery slides into fullscreen swiper
+document.querySelectorAll('.gallery-swiper .swiper-slide img').forEach((img, index) => {
+  const slide = document.createElement('div');
+  slide.className = 'swiper-slide';
+  slide.innerHTML = `<img src="${img.src}" alt="Zoomed Image">`;
+  fullscreenSwiperContainer.appendChild(slide);
 
-  .tap-hint {
-    text-align: center;
-    font-size: 1em;
-    margin-top: 0.5em;
-  }
-</style>
-
-<!-- JS: Updated to match Swiper v11 and isolation -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script>
-  let swiper;
-
-  const placeholder = document.getElementById('image-gallery-placeholder');
-  const tapHint = document.querySelector('.tap-hint');
-  const closeArea = document.getElementById('close-gallery-area');
-
-  function initGallery() {
-    swiper = new Swiper('.my-gallery-swiper', {
-      direction: 'horizontal',
-      loop: false,
-      zoom: true,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      touchStartPreventDefault: false,
-    });
-  }
-
-  // Open gallery on tap
-  placeholder.addEventListener('click', function (e) {
-    if (!swiper) {
-      initGallery();
-      placeholder.classList.add('active');
-      tapHint.style.display = 'none';
-    }
+  img.addEventListener('click', () => {
+    fullscreenWrapper.style.display = 'flex';
+    fullscreenSwiper.slideToLoop(index);
   });
+});
 
-  // Exit gallery when tapping on pagination area
-  closeArea.addEventListener('click', function () {
-    if (swiper) {
-      swiper.destroy(true, true);
-      swiper = null;
-      tapHint.style.display = 'block';
-    }
-  });
-</script>
+// Initialize Fullscreen Swiper
+const fullscreenSwiper = new Swiper('.fullscreen-swiper', {
+  loop: true,
+  pagination: {
+    el: '.fullscreen-swiper .swiper-pagination',
+    clickable: true,
+  },
+  spaceBetween: 20,
+  slidesPerView: 1,
+});
+
+// Tap anywhere to exit fullscreen
+fullscreenWrapper.addEventListener('click', () => {
+  fullscreenWrapper.style.display = 'none';
+});
+
+// Wrap in DOMContentLoaded
+document.addEventListener('DOMContentLoaded', () => {
+  // your swiper and click initialization here
+});
+

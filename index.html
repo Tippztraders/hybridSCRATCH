@@ -5,171 +5,235 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Edifício à Venda - Keep Pushing</title>
 
-  <!-- Swiper CSS -->
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-  />
-  <style>
-    /* Your gallery styles included here */
-    .image-gallery-placeholder {
-      width: 850px;
-      height: 567px;
-      margin: 2em auto;
-      position: relative;
-      border: 3px solid #ccc;
-      display: flex;
-      justify-content: center;
-      align-items: flex-end;
-      overflow: hidden;
-    }
-
-    .image-gallery-placeholder .swiper {
-      width: 100%;
-      height: 100%;
-      position: relative;
-    }
-
-    .image-gallery-placeholder .swiper-slide {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100%;
-    }
-
-    .image-gallery-placeholder img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-    }
-
-    .image-gallery-placeholder .swiper-pagination {
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-      text-align: center;
-      padding: 10px;
-      background-color: rgba(255, 255, 255, 0.8);
-      z-index: 10;
-    }
-
-    .image-gallery-placeholder .swiper-pagination-bullet {
-      background-color: #333;
-      opacity: 0.6;
-      width: 10px;
-      height: 10px;
-      margin: 4px;
-      border-radius: 50%;
-    }
-
-    .image-gallery-placeholder .swiper-pagination-bullet-active {
-      background-color: #000;
-      opacity: 1;
-    }
-
-    .tap-hint {
-      text-align: center;
-      font-size: 1em;
-      margin-top: 0.5em;
-    }
-
-    .end-slide {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: #e0f7fa;
-      font-size: 1.4em;
-      font-weight: bold;
-      color: #006064;
-    }
-    .end-text {
-      text-align: center;
-    }
-  </style>
+  <!-- Your CSS + Swiper CSS -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 </head>
 <body>
+  <div class="site-container">
 
-  <header>
-    <h1>Edifício à Venda</h1>
-    <p>Av. Lenine, Mutu-ya-Kevele</p>
-  </header>
-
-  <nav>
-    <ul>
-      <li><a href="#galeria">Galeria de Imagens</a></li>
-    </ul>
-  </nav>
-
-  <!-- Gallery Section -->
-  <section id="galeria">
-    <h2><u>Galeria de Imagens</u></h2>
-    <div class="site-container">
-      <div class="image-gallery-placeholder" id="image-gallery-placeholder">
-
-        <!-- Swiper container -->
-        <div class="my-gallery-swiper swiper">
-          <div class="swiper-wrapper">
-            <!-- Slides FG1 to FG5 for demo -->
-            <div class="swiper-slide"><div class="swiper-zoom-container"><img src="FG1.jpg" alt="FG1" /></div></div>
-            <div class="swiper-slide"><div class="swiper-zoom-container"><img src="FG2.jpg" alt="FG2" /></div></div>
-            <div class="swiper-slide"><div class="swiper-zoom-container"><img src="FG3.jpg" alt="FG3" /></div></div>
-            <div class="swiper-slide"><div class="swiper-zoom-container"><img src="FG4.jpg" alt="FG4" /></div></div>
-            <div class="swiper-slide"><div class="swiper-zoom-container"><img src="FG5.jpg" alt="FG5" /></div></div>
-            <div class="swiper-slide end-slide">
-              <div class="end-text">Começando Denovo</div>
-            </div>
-          </div>
-          <div class="swiper-pagination" id="close-gallery-area"></div>
-        </div>
-
-        <p class="tap-hint">Toque para abrir</p>
+    <!-- HEADER -->
+    <header class="hero">
+      <div class="hero-content">
+        <img src="logo.png" alt="Logo" class="hero-logo" />
+        <h1 class="headline">Edifício à Venda</h1>
+        <p class="address-line">Av. Lenine, Mutu-ya-Kevele</p>
+        <p class="city">Luanda – Angola</p>
+        <p class="tagline">“Oportunidade de Investimento com Potencial de Valorização”</p>
       </div>
+    </header>
+
+    <!-- NAVIGATION -->
+    <nav class="section-nav">
+      <ul>
+        <li><a href="#descricao">Descrição do Edifício</a></li>
+        <li><a href="#localizacao">Localização do Edifício</a></li>
+        <li><a href="#galeria">Galeria de Imagens</a></li>
+        <li><a href="#resumo">Resumo</a></li>
+        <li><a href="#bonus">Informação Bónus Sobre o Edifício</a></li>
+     </ul>
+    </nav>
+
+    <!-- AFTER HERO IMAGE -->
+    <img src="Handbuild.png" alt="Building Front View" class="after-hero-image" />
+
+    <!-- DESCRIÇÃO -->
+    <section id="descricao">
+      <h2><u>Descrição do Edifício</u></h2>
+      <div class="info-card">
+        <img src="building.png" alt="Building" class="inline-icon" />
+        Edifício de 4 andares com escritórios modernos, ideal para empresas e investidores.
+      </div>
+      <div class="info-card">
+        <img src="openplan.png" alt="Open Plan" class="inline-icon" />
+        T0 - Plano aberto (Open space), divisão feita com caxilharia.
+      </div>
+      <div class="info-card">
+        <img src="parkinglot.png" alt="Parking" class="inline-icon" />
+        Estacionamento para 5 á 6 carros.
+      </div>
+      <div class="info-card">
+        <img src="wande.png" alt="Wande" class="inline-icon" />
+        Luz e Água com tanque de água extra.
+      </div>
+    </section>
+
+    <!-- TWO IMAGES AFTER DESCRIÇÃO -->
+<div class="image-pair-wrapper">
+  <img src="GROUP2a.jpg" alt="Side View" class="after-description-image" />
+  <img src="GROUP2b.jpg" alt="Building Front View" class="after-description-image" />
+</div>
+
+
+    <!-- LOCALIZAÇÃO -->
+    <section id="localizacao">
+      <h2><u>Localização do Edifício</u></h2>
+      <p>Localizado em frente do Largo do Mutu (Salvador Correia), Av. Lenine, ao descer à sua direita.</p>
+      <p class="location-highlight">
+        O espaço total abrange <b>1058 metros quadrados (1058m²)</b>.
+      </p>
+      <p>Em frente tem um parque em reabilitação para a construção de um parque de estacionamento moderno.</p>
+    </section>
+
+    <!-- Actual GPS Map -->
+    <section id="mapa">
+  <h2><u>📍 Localização no Mapa</u></h2>
+  <a href="https://maps.app.goo.gl/hdVe9tb8zAqcUYJi8" target="_blank" class="map-container">
+   <!-- <img src=location.png" alt="Ver no Mapa" class="map-image"> -->
+    <!-- <img src=locationpin.png" alt="Pin" class="map-pin"> -->
+  </a>
+  <p class="map-hint">🔎 Toque para abrir o local no Google Maps</p>
+</section>
+
+    <!-- GPS IMAGE -->
+    <!-- For the actual GPS -->
+    <div class="gps-map-wrapper">
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3977.092490171616!2d13.2354!3d-8.8165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a52f1fa70e0d7fb%3A0x9d3a3925b6f5e244!2sMutu-ya-Kevela!5e0!3m2!1sen!2sao!4v1653931176105!5m2!1sen!2sao"
+    width="100%"
+    height="300"
+    style="border:0; border-radius: 8px;"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+  ></iframe>
+</div>
+
+    <!-- GALERIA DE IMAGENS -->
+    <section id="galeria">
+      <h2><u>Galeria de Imagens</u></h2>
+      <div class="site-container">
+      <div class="image-gallery-placeholder" id="image-gallery-placeholder">
+      <div class="swiper gallery-swiper">
+        <div class="swiper-wrapper" id="gallery">
+          <div class="swiper-slide"><img src="FG1.jpg" alt="FG1" /></div>
+          <div class="swiper-slide"><img src="FG2.jpg" alt="FG2" /></div>
+          <div class="swiper-slide"><img src="FG3.jpg" alt="FG3" /></div>
+          <div class="swiper-slide"><img src="FG4.jpg" alt="FG4" /></div>
+          <div class="swiper-slide"><img src="FG5.jpg" alt="FG5" /></div>
+          <div class="swiper-slide"><img src="FG6.jpg" alt="FG6" /></div>
+          <div class="swiper-slide"><img src="FG7.jpg" alt="FG7" /></div>
+          <div class="swiper-slide"><img src="FG8.jpg" alt="FG8" /></div>
+          <div class="swiper-slide"><img src="FG9.jpg" alt="FG9" /></div>
+          <div class="swiper-slide"><img src="FG10.jpg" alt="FG10" /></div>
+          <div class="swiper-slide"><img src="FG11.jpg" alt="FG11" /></div>
+          <div class="swiper-slide"><img src="FG12.jpg" alt="FG12" /></div>
+          <div class="swiper-slide"><img src="FG14.jpg" alt="FG14" /></div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+   <p class="tap-hint">Toque para abrir</p> 
+   </section>
+
+<!-- Fullscreen Gallery Viewer -->
+<div class="fullscreen-gallery" id="fullscreenGallery">
+  <img id="fullscreenImage" src="" alt="Imagem Ampliada">
+  <p class="exit-hint">Toque para sair</p>
+</div>     
+
+    <!-- VÍDEOS DO IMÓVEL -->
+    <section
+      id="videos"
+      style="background: url('Backgdmedia.png') center/cover no-repeat; padding: 2em 1em; border-radius: 12px; margin-bottom: 2em;"
+    >
+      <h2 style="color: black;">Vídeos do Imóvel</h2>
+      <div class="swiper video-swiper">
+        <div class="swiper-wrapper" id="videos-container"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+
+    <!-- PREÇO -->
+    <section id="preco">
+      <h2><u>Preço</u></h2>
+      <div class="info-card">
+        <p>❌ Preço Anterior: <strike>US$ 2.6 (dois milhões e seiscentos mil dólares)</strike></p>
+      </div>
+      <div class="info-card">
+        <strong>✅ Preço Atual: US$ 1.750.000,00</strong>
+      </div>
+      <div class="info-card">O preço base é em dólares americanos conforme consta no mandato.</div>
+      <div class="info-card">
+        Equivalente: ~170.000.000,00 Kzs (Cento e Setenta Míl Milhões de kwanzas)*
+        <br /><small>*O valor será pago em dólares americanos ou equivalente ao câmbio do dia.</small>
+      </div>
+    </section>
+
+    <!-- RESUMO -->
+    <section id="resumo" class="highlight-grid">
+  <h2><u>Resumo</u></h2>
+  <div class="resume-grid">
+    <div class="highlight-card">
+      <div class="emoji">🏢</div>
+      <p>Edifício de 4 Andares</p>
     </div>
-  </section>
+    <div class="highlight-card">
+      <div class="emoji">💡</div>
+      <p>Luz e Água</p>
+    </div>
+    <div class="highlight-card">
+      <div class="emoji">🚗</div>
+      <p>Estacionamento para 5 á 6 carros</p>
+    </div>
+    <div class="highlight-card">
+      <div class="emoji">🧱</div>
+      <p>Condição: Necessita atenção</p>
+    </div>
+    <div class="highlight-card">
+      <div class="emoji">📍</div>
+      <p>Av. Lenine, frente ao Mutu</p>
+    </div>
+  </div>
+</section>
+
+    <!-- CONDIÇÃO DE USO / DISCLAIMER -->
+    <section id="condicao-de-uso">
+      <h2>
+        <u>
+          <a href="disclaimer.html" class="bonus-link">Condição de Uso</a>
+        </u>
+      </h2>
+    </section> 
+
+    <!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-container">   
+    
+    <div class="footer-section importantes">
+      <h4>Links Importantes</h4>
+      <ul>
+        <li><a href="#info-bonus">Informação Bónus</a></li>
+        <li><a href="#condicoes-uso">!!Condições de Uso deste Website!!</a></li>
+      </ul>
+    </div>
+        
+    <div class="footer-section links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#topo">Retornar à Página Principal</a></li>
+        <li><a href="#descricao">Descrição</a></li>
+        <li><a href="#localizacao">Localização</a></li>
+        <li><a href="#galeria">Galeria</a></li>
+        <li><a href="#preco">Preço</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section contact">
+      <h4>Contactos</h4>
+      <p>Av. Lenine, Mutu-ya-Kevele</p>
+      <p>Email: claudio.arrojarealtors@gmail.com</p>
+      <p>Tel: +244 923317190 (Whatsapp)</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Arroja Imobiliárias. Todos os direitos reservados.</p>
+  </div>
+</footer>
 
   <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <!-- Your custom JS -->
+  <script src="script.js"></script>
 
-  <script>
-    let swiper;
-
-    const placeholder = document.getElementById('image-gallery-placeholder');
-    const tapHint = document.querySelector('.tap-hint');
-    const closeArea = document.getElementById('close-gallery-area');
-
-    function initGallery() {
-      swiper = new Swiper('.my-gallery-swiper', {
-        direction: 'horizontal',
-        loop: false,
-        zoom: {
-          maxRatio: 3,
-          minRatio: 1,
-        },
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
-        touchStartPreventDefault: false,
-      });
-    }
-
-    // Open gallery on tap
-    placeholder.addEventListener('click', function (e) {
-      if (!swiper) {
-        initGallery();
-        placeholder.classList.add('active');
-        tapHint.style.display = 'none';
-      }
-    });
-
-    // Exit gallery when tapping on pagination area
-    closeArea.addEventListener('click', function () {
-      if (swiper) {
-        swiper.destroy(true, true);
-        swiper = null;
-        tapHint.style.display = 'block';
-      }
-    });
-  </script>
 </body>
 </html>

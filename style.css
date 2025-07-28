@@ -1,3 +1,4 @@
+/* Reset & Base */
 body {
   margin: 0;
   font-family: sans-serif;
@@ -127,6 +128,16 @@ body {
   font-size: 1.2em;
 }
 
+.image-pair-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 40px auto;
+  max-width: 920px;
+  padding: 10px;
+}
 /* IMAGE AFTER DESCRIPTION */
 .image-pair-wrapper img.after-description-image {
   max-width: 100%;
@@ -137,7 +148,25 @@ body {
 }
 
 /* == INFO CARDS == */
+.info-card {
+  background: linear-gradient(to right, #ccebff, #99d6ff);
+  border-left: 5px solid #99ccff;
+  padding: 1em;
+  margin: 1em auto;
+  border-radius: 10px;
+  max-width: 720px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  text-align: left;
+  font-size: 1em;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
 
+.info-card strong {
+  font-size: 1.4em;
+  color: #004d00;
+}
 
 /* INLINE ICONS */
 .inline-icon {
@@ -212,7 +241,7 @@ section p {
   text-align: center;
 }
 
-/* Actual Map with Pin layout */
+/* Actul Map with Pin layout */
 #mapa {
   padding: 20px;
   text-align: center;
@@ -266,193 +295,222 @@ section p {
 }
 
 /* == IMAGE GALLERY == */
-.image-gallery-placeholder {
-  width: 250px;
-  height: 300px;
-  margin: 0;
-  position: relative;
-  background: #f0f0f0;
-  overflow: hidden;
-  border: 2px solid #ccc;
-  border-radius: 8px;
-}
 
-.gallery-swiper {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: flex-end; /* images sit at base */
-  position: relative;
-}
-
-.gallery-swiper .swiper-slide {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-}
-
-.gallery-swiper img {
-  width: 100%;
-  height: auto;
-  max-height: 100%;
-  object-fit: contain;
-  touch-action: pinch-zoom;
-}
-
-.swiper-pagination {
-  position: absolute;
-  bottom: 10px;
+/* Make "Toque para abrir" tighter to the gallery */
+.tap-to-open {
   text-align: center;
-  width: 100%;
-  z-index: 10;
-  cursor: pointer;
-}
-
-.tap-hint {
-  margin-top: 10px;
-  text-align: center;
-  font-size: 0.9em;
+  font-size: 14px;
+  margin-top: 6px; /* Reduced from too high */
+  margin-bottom: 0;
   color: #555;
 }
 
-/* Final slide style */
-.end-slide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #e0f7fa;
-  font-size: 1.4em;
-  font-weight: bold;
-  color: #006064;
+/* Image Gallery Tap Hint */
+.tap-hint {
+  text-align: center;
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 10px;
+  font-style: italic;
+  margin-top: 5px; /* make toque aqui para abrir perto da imagem */
 }
 
-.end-slide .end-text {
+/* == Fullscreen image viewer styles == */
+#fullscreenGallery {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 400vh;  /* 100vh; */
+  background: rgba(0, 0, 0, 0.95);  /* was  background: rgba(0, 0, 0, 0.95); 9 t0 95 is alot */
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  flex-direction: column;
+  padding: 10px;
+  /* .fullscreen-gallery img { THIS HAS BEING CAUSING SERIOUS ISSUES, for RESUME AND FOOTER */
+  max-width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+  /* inset: 0;  { THIS HAS BEING CAUSING SERIOUS ISSUES, for RESUME AND FOOTER */
+}
+
+.exit-hint {
+  color: #87CEFA;
+  font-size: 14px;
   text-align: center;
+  margin-top: 10px;  /* 10px */
+  font-style: italic;
+}
+
+/* == GALLERY SWIPER ==  */
+.gallery-swiper {
+  height: 300px;   /* 300px;  */
+  margin: 1em 0 3em;
+}
+
+#fullscreenImage {
+  max-width: 90%;
+  max-height: 10vh;    /*  80vh;   */
+  margin-bottom: 10px;
+  object-fit: contain;
+  border: 2px solid white;
+  border-radius: 8px;
+}
+
+ #fullscreenGallery .swiper-pagination {
+  margin-top: 8px;
+  position: relative;
+  bottom: auto;
+} 
+
+/* For resizing image placeholder for gallery */
+#galeria {
+  padding: 10px 0; 
+  text-align: center;  
+  margin: 0 auto;
+  max-height: 300px; /* or try 250px if needed */
+  overflow: hidden;  
+  min-height: 200px;
+  background: rgba(255, 0, 0, 0.05); /* #fff; TEMP: light red background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap; /* ✅ NEW — allows multiple rows if needed */
+  gap: 6px;        /* ✅ NEW — adds spacing between images */
+}
+ 
+#galeria .site-container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+#galeria h2 {
+  margin-bottom: 10px;
+}
+  
+#galeria img {
+  max-height: 180px;  /* 250px; */
+  width: auto; 
+  object-fit: cover;
+  display: inline-block;
+  margin: 0 5px;
 }
 
 /* == VIDEO GALLERY == */
-
-/* == PRICE == */  
-.info-card {
-  background: linear-gradient(to right, #ccebff, #99d6ff); /* blue gradient */
-  border-left: 5px solid #99ccff;
-  padding: 1em;
-  margin: 1em auto;
-  border-radius: 10px;
-  max-width: 720px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  text-align: left;
-  font-size: 1em;
-  color: #003366;
+#videos {
+  max-height: 300px;
+  min-height: 200px;
+  overflow: hidden;
+  padding: 10px 0;
+  background: rgba(0, 0, 255, 0.05); /* TEMP: light blue background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.destaque-preco {  /* this is the "atual preco" */
-  background: linear-gradient(to right, #d4fcd4, #a0e6a0); /* green gradient */
-  border: 2px solid #8ccf8c;
-  padding: 18px 24px;
-  margin: 20px auto;
-  text-align: center;
-  font-weight: bold;
-  border-radius: 0;
+  .video-gallery-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.video-swiper {
   max-width: 600px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
-  font-size: 1.4em;
-  color: #004d00;
+  width: 100%;
+  height: 300px;
 }
 
-.pago-dolares { 
-  background: linear-gradient(to right, #e8ebed, #e6e8eb); 
-  border-left: 5px solid #bfbfbf;
-  padding: 1em;
-  margin: 1em auto;
-  border-radius: 10px;
-  max-width: 720px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  text-align: left;
-  font-size: 1em;
-  color: #003366;
+#videos video {
+  max-height: 180px;
+  object-fit: cover;
+  margin: 0 5px;
+  display: inline-block;
 }
 
+  /* Video Swiper */
+.video-swiper {
+  max-height: 300px;
+  margin-top: 1em;
+  width: 100%;
+  object-fit: cover;
+}
+
+.video-swiper iframe,
+.video-swiper video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+  
+/* == PRICE == */  
+#preco .info-card p strong {
+  font-weight: 1000;   /* 600 */  
+  font-size: 40px;  /* 16px */  
+}
+
+.info-card {
+  font-size: 16px; /* Adjust this as needed: try 14px, 18px, etc. */
+}
+  
+
+
+/* == RESUMO == */  
+/* HIGHLIGHT GRID - RESUMO */
 /* == RESUMO == */
-/* .resume-grid {
+.resume-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   gap: 15px;
   padding: 20px 0;
   text-align: center;
-}  */
-
-.resume-grid {
-  display: flex;
-  flex-direction: column;
-  padding: 20px 0;
-  text-align: center;
-  gap: 0; /* no gap */
 }
 
-
-
-.building-card {
+.highlight-card {
   background-color: #24fff8;  
   border-radius: 12px;
+  padding: 12px;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.08);
-  text-align: center;
-  border-radius: 0;
+  text-align: center; /* center all inner text including emoji */
 }
 
-.building-card p {
+.emoji {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.highlight-card p {
+  font-size: 14px;
   margin: 0;
-  text-align: center; /* explicitly center the text */
+  align-items: center;
+  justify-content: center;
 }
 
-  .utility-card {
-   background-color: none;  
-  border-radius: 12px;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.08);
-  text-align: center;
-  border-radius: 0;
+/* BONUS LINK & DISCLAIMER */
+.bonus-link {
+  display: inline-block;
+  font-size: 1em;  /* reduce from inherited larger sizes */
+  margin-top: 1em;
+  color: #0066cc;
+  text-decoration: underline;
+  font-weight: bold;
+  font-style: italic;
 }
 
-.utility-card p {
-  margin: 0;
-  text-align: center; /* explicitly center the text */
+.bonus-link:hover {
+  color: #004499;
+  text-decoration: none;
 }
 
-.redcar-card {
-  background-color: #24fff8;  
-  border-radius: 12px;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.08);
-  text-align: center;
-  border-radius: 0;
-}
-
-.redcar-card p {
-  margin: 0;
-  text-align: center; /* explicitly center the text */
-}
-
-  .condition-card {
-   background-color: none;  
-  border-radius: 12px;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.08);
-  text-align: center;
-}
-
-.condition-card p {
-  margin: 0;
-  text-align: center; /* explicitly center the text */
-}
-  .address-card {
-   background-color: #24fff8;  
-  border-radius: 12px;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.08);
-  text-align: center;
-  border-radius: 0;    
-}
-
-.address-card p {
-  margin: 0;
-  text-align: center; /* explicitly center the text */
+/* == SWIPERS == */
+.swiper-slide img,
+.swiper-slide video {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
 }
 
 /* FOOTER: THIS CODE CONTROLS THE FOOTER */
