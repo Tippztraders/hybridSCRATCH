@@ -101,11 +101,9 @@
 
     <!-- GALERIA DE IMAGENS -->
     <section id="galeria">
-      <h2><u>Galeria de Imagens</u></h2>
-      <div class="site-container">
-      <div class="image-gallery-placeholder" id="image-gallery-placeholder">
-      <div class="swiper gallery-swiper">
-        <div class="swiper-wrapper" id="gallery">
+  <h2><u>Galeria de Imagens</u></h2>
+  <div class="site-container">    
+        <div class="thumbnail-gallery">
            <div class="swiper-slide"><img src="FG1.jpg" alt="FG1" /></div>
            <div class="swiper-slide"><img src="FG2.jpg" alt="FG2" /></div>
            <div class="swiper-slide"><img src="FG3.jpg" alt="FG3" /></div>
@@ -143,18 +141,29 @@
            <div class="swiper-slide"><img src="FG36.jpg" alt="FG36" /></div>
            <div class="swiper-slide"><img src="FG37.jpg" alt="FG37" /></div>
            <div class="swiper-slide"><img src="FG38.jpg" alt="FG38" /></div>      
-        </div>
-        <div class="swiper-pagination"></div>
-      </div>
-   <p class="tap-hint">Toque para abrir</p> 
-   </section>
+       </div>
 
-<!-- Fullscreen Gallery Viewer -->
-<div class="fullscreen-gallery" id="fullscreenGallery">
-  <img id="fullscreenImage" src="" alt="Imagem Ampliada">
-  <p class="exit-hint">Toque para sair</p>
-</div>     
+    <p class="tap-hint">Toque para abrir</p>
+  </div>
+</section>
 
+<!-- Fullscreen Swiper Gallery -->
+<div id="imageGalleryModal" class="hidden">
+  <div class="safe-swiper swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><div class="swiper-zoom-container"><img src="FG1.jpg" alt="FG1" /></div></div>
+      <div class="swiper-slide"><div class="swiper-zoom-container"><img src="FG2.jpg" alt="FG2" /></div></div>
+      <div class="swiper-slide"><div class="swiper-zoom-container"><img src="FG3.jpg" alt="FG3" /></div></div>
+      <!-- Repeat up to FG38 -->
+      <div class="swiper-slide"><div class="swiper-zoom-container"><img src="FG38.jpg" alt="FG38" /></div></div>
+    </div>
+
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="close-text" onclick="closeFullscreen()">Toque para sair</div>
+  </div>
+</div>
     <!-- VÍDEOS DO IMÓVEL -->
     <section
       id="videos"
