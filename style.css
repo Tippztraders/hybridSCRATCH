@@ -399,6 +399,87 @@ section p {
   margin: 0 5px;
 }
 
+/* === GALERIA DE IMAGENS - N29 === */
+
+/* Tappable thumbnails */
+.thumbnail-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.thumbnail-gallery img {
+  width: 80px;
+  height: 60px;
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: transform 0.2s ease;
+}
+
+.thumbnail-gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* Hint below gallery */
+.tap-hint {
+  text-align: center;
+  font-size: 13px;
+  color: #666;
+  margin-top: 8px;
+}
+
+/* Fullscreen Swiper Modal */
+#imageGalleryModal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.97);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#imageGalleryModal.hidden {
+  display: none;
+}
+
+#imageGalleryModal .swiper {
+  width: 100%;
+  height: 100%;
+}
+
+#imageGalleryModal .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#imageGalleryModal .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+#imageGalleryModal .swiper-zoom-container {
+  width: 100%;
+  height: 100%;
+}
+
+#imageGalleryModal .close-text {
+  color: white;
+  font-size: 15px;
+  text-align: center;
+  padding: 10px 0;
+}
+
+
+
+
+
+
 /* == VIDEO GALLERY == */
 #videos {
   max-height: 300px;
